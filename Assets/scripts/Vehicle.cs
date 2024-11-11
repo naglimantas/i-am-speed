@@ -8,6 +8,8 @@ public class Vehicle : MonoBehaviour
     public float maxReverseSpeed;
     public float speed;
     public float turnSpeed;
+    public float speedRatio;
+    public AnimationCurve enginePitchCurve;
 
     public AudioSource engineSound;
     Rigidbody rb;
@@ -29,6 +31,11 @@ public class Vehicle : MonoBehaviour
     }
     private void Update()
     {
+        speedRatio = speed / maxSpeed;
+        engineSound.pitch = enginePitchCurve.Evaluate(speedRatio);
+
+        speed *= decelaration;
+
         //gas
         var y = rb.velocity.y;
         rb.velocity = transform.forward * speed;

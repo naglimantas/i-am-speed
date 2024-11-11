@@ -1,97 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3618322046120308477
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4062091809573752095}
-  - component: {fileID: 2232943173535351832}
-  - component: {fileID: 1566729881967972635}
-  m_Layer: 0
-  m_Name: Main Camera
-  m_TagString: MainCamera
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4062091809573752095
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3618322046120308477}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0.052335896, y: -0, z: -0, w: 0.9986295}
-  m_LocalPosition: {x: -0, y: 2.69, z: -4.7}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 911152946513680119}
-  m_LocalEulerAnglesHint: {x: 6, y: 0, z: 0}
---- !u!20 &2232943173535351832
-Camera:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3618322046120308477}
-  m_Enabled: 1
-  serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
-  m_projectionMatrixMode: 1
-  m_GateFitMode: 2
-  m_FOVAxisMode: 0
-  m_Iso: 200
-  m_ShutterSpeed: 0.005
-  m_Aperture: 16
-  m_FocusDistance: 10
-  m_FocalLength: 50
-  m_BladeCount: 5
-  m_Curvature: {x: 2, y: 11}
-  m_BarrelClipping: 0.25
-  m_Anamorphism: 0
-  m_SensorSize: {x: 36, y: 24}
-  m_LensShift: {x: 0, y: 0}
-  m_NormalizedViewPortRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 100
-  orthographic: 0
-  orthographic size: 5
-  m_Depth: -1
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
-  m_TargetDisplay: 0
-  m_TargetEye: 3
-  m_HDR: 1
-  m_AllowMSAA: 1
-  m_AllowDynamicResolution: 0
-  m_ForceIntoRT: 0
-  m_OcclusionCulling: 1
-  m_StereoConvergence: 10
-  m_StereoSeparation: 0.022
---- !u!81 &1566729881967972635
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3618322046120308477}
-  m_Enabled: 1
 --- !u!1 &8887527445844345923
 GameObject:
   m_ObjectHideFlags: 0
@@ -127,7 +35,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2899861096819075761}
-  - {fileID: 4062091809573752095}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 83.759, z: 0}
 --- !u!114 &5610455824426018428
@@ -159,12 +66,73 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   accelaration: 2
-  decelaration: 0
+  decelaration: 1
   maxSpeed: 10
   maxReverseSpeed: 0
   speed: 0
   turnSpeed: 90
-  engineSound: {fileID: 0}
+  speedRatio: 0
+  enginePitchCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0.8987718
+      outSlope: 0.8987718
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.21279545
+      value: 0.19125456
+      inSlope: -1.6849197
+      outSlope: -1.6849197
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.25593647
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.67473966
+      value: 0.2469176
+      inSlope: -2.2038603
+      outSlope: -2.2038603
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.20689297
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.8449818
+      value: 0.49770212
+      inSlope: -7.3864117
+      outSlope: -7.3864117
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.3131722
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.9538114
+      value: 0.7476663
+      inSlope: -11.428368
+      outSlope: -11.428368
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.34131077
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 5.463117
+      outSlope: 5.463117
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  engineSound: {fileID: 4436530303090996678}
 --- !u!82 &4436530303090996678
 AudioSource:
   m_ObjectHideFlags: 0
