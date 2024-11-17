@@ -1,4 +1,8 @@
+using System;
+using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Vehicle : MonoBehaviour
 { 
@@ -9,7 +13,9 @@ public class Vehicle : MonoBehaviour
     public float speed;
     public float turnSpeed;
     public float speedRatio;
+    public float fakeSpeed;
     public AnimationCurve enginePitchCurve;
+    public TMP_Text speedNumber;
 
     public AudioSource engineSound;
     Rigidbody rb;
@@ -27,7 +33,8 @@ public class Vehicle : MonoBehaviour
 
     public void Brake()
     {
-
+        speed -= decelaration * Time.deltaTime;
+        if (speed < -maxSpeed) speed = -maxSpeed;
     }
     private void Update()
     {
@@ -40,6 +47,9 @@ public class Vehicle : MonoBehaviour
         var y = rb.velocity.y;
         rb.velocity = transform.forward * speed;
         rb.velocity = new Vector3(rb.velocity.x, y, rb.velocity.z);
+
+        fakeSpeed = speed * 10;
+        speedNumber.SetText(fakeSpeed.ToString());
     }
 
     public void Turn(float side)
