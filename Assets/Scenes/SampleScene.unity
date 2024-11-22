@@ -38,6 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
+  m_IndirectSpecularColor: {r: 0.33573085, g: 0.4192694, b: 0.5752519, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -514,7 +515,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 0, g: 0, b: 0.3207547, a: 1}
+  m_Color: {r: 1, g: 0.8, b: 0.4, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -573,13 +574,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705507993}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalRotation: {x: 0.51095265, y: -0.46292904, z: 0.5191142, w: 0.50511837}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 85.422, y: 51.904, z: 139.953}
 --- !u!1 &813143991
 GameObject:
   m_ObjectHideFlags: 0
@@ -1227,7 +1228,6 @@ Terrain:
   m_DetailObjectDensity: 1
   m_HeightmapPixelError: 5
   m_SplatMapDistance: 1000
-  m_HeightmapMinimumLODSimplification: 0
   m_HeightmapMaximumLOD: 0
   m_ShadowCastingMode: 2
   m_DrawHeightmap: 1
@@ -1319,6 +1319,14 @@ PrefabInstance:
     - target: {fileID: 5610455824426018428, guid: f531b2a5d84e797488d268b44c891606, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7955666803581804506, guid: f531b2a5d84e797488d268b44c891606, type: 3}
+      propertyPath: decelaration
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7955666803581804506, guid: f531b2a5d84e797488d268b44c891606, type: 3}
+      propertyPath: maxReverseSpeed
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8887527445844345923, guid: f531b2a5d84e797488d268b44c891606, type: 3}
       propertyPath: m_Name
